@@ -1,4 +1,4 @@
-module pp
+module github.com/arreyder/pp
 
 go 1.23.0
 
