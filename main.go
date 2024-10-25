@@ -34,7 +34,7 @@ func beautifyJSONInStream(text string) {
 		if err := json.Unmarshal([]byte(jsonPart), &parsedJSON); err == nil {
 			// If it's valid JSON, print the beautified version with color
 			beautifiedJSON, _ := json.MarshalIndent(parsedJSON, "", "    ")
-			fmt.Println(jsonColor(string(beautifiedJSON)))
+			fmt.Println("\n" + jsonColor(string(beautifiedJSON)))
 		} else {
 			// If it's not valid JSON, print it as-is with original color
 			fmt.Print(nonJSONColor(jsonPart))
